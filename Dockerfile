@@ -14,4 +14,5 @@ RUN apt-get update && apt-get install -y \
         make \
         openssl \
         pkg-config \
+        wget \
         && apt-get clean
