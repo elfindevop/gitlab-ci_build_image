@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
         libboost-all-dev \
         libcgicc5-dev \
         libjsoncpp-dev \
+        libpcre3-dev \
         libssl-dev \
         libtool \
         make \
