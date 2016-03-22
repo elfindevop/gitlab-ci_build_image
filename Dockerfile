@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
         libboost-all-dev \
         libcgicc5-dev \
         libjsoncpp-dev \
-        libssl1.0.0 \
+        libssl-dev \
         libtool \
         make \
         openssl \
