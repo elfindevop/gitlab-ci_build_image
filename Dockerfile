@@ -32,6 +32,6 @@ RUN apt-get update && apt-get install -y \
         && rm master.zip \
         \
         && mkdir /tools \
-        && wget https://releases.linaro.org/components/toolchain/binaries/4.9-2016.02/arm-linux-gnueabihf/gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz \
-        && tar -xf gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz -C /tools/ \
-        && rm gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz
+        && wget http://releases.linaro.org/components/toolchain/binaries/4.9-2016.02/arm-linux-gnueabihf/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf.tar.xz \
+        && tar -xf gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf.tar.xz -C /tools/ \
+        && rm gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf.tar.xz
