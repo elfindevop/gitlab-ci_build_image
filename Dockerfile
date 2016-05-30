@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
         libpcre3-dev \
         libssl-dev \
         libtool \
+        libtool-bin \
         make \
         openssl \
         pkg-config \
