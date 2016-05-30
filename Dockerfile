@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
         openssl \
         pkg-config \
         tar \
+        unzip \
         wget \
         && apt-get clean \
         \
@@ -24,8 +25,12 @@ RUN apt-get update && apt-get install -y \
         && cd googletest \
         && cmake -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install \
         \
-        && git clone https://github.com/lewicki-pk/rpi-sysroot.git /rpi-sysroot/ \
+        && wget https://github.com/lewicki-pk/rpi-sysroot/archive/master.zip \
+        && unzip master.zip -d / \
+        && mv /rpi-sysroot-master /rpi-sysroot \
+        && rm master.zip \
         \
         && mkdir /tools \
         && wget https://releases.linaro.org/components/toolchain/binaries/4.9-2016.02/arm-linux-gnueabihf/gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz \
-        && tar -xf gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz -C /tools/
+        && tar -xf gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz -C /tools/ \
+        && rm gcc-linaro-4.9-2016.02-i686-mingw32_arm-linux-gnueabihf.tar.xz
