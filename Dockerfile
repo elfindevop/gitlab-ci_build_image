@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
         libssl-dev \
         libtool \
         libtool-bin \
-        linux-headers \
+        linux-headers-4.4.0-21-generic \
         make \
         openssl \
         pkg-config \
