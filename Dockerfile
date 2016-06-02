@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -y \
         libpcre3-dev \
         libssl-dev \
         libtool \
-        libtool-bin \
-        linux-headers-generic \
+        linux-headers-3.19.0-59-generic \
         make \
         openssl \
         pkg-config \
@@ -26,3 +25,6 @@ RUN apt-get update && apt-get install -y \
         && git clone https://github.com/google/googletest.git \
         && cd googletest \
         && cmake -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install
+
+# libtool-bin was created/splitted in 16.04
+#        libtool-bin
