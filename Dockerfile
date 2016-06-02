@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 MAINTAINER lewicki.pk@gmail.com
 
 RUN apt-get update && apt-get install -y \
@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
         libssl-dev \
         libtool \
         libtool-bin \
-        linux-headers-4.4.0-21-generic \
+        linux-headers-generic \
         make \
         openssl \
         pkg-config \
