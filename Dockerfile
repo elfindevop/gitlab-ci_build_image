@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER lewicki.pk@gmail.com
 
 RUN apt-get update && apt-get install -y \
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
         libpcre3-dev \
         libssl-dev \
         libtool \
-        linux-headers-3.19.0-59-generic \
+        libtool-bin \
         make \
         openssl \
         pkg-config \
@@ -24,7 +24,15 @@ RUN apt-get update && apt-get install -y \
         \
         && git clone https://github.com/google/googletest.git \
         && cd googletest \
-        && cmake -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install
+        && cmake -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install \
+        \
+        mkdir -p /lib/modules/3.19.0-59-generic/ \
+        mkdir -p /usr/src/ \
+        cd /lib/modules/3.19.0-59-generic/ \
+        ln -s /usr/src/linux-headers-3.19.0-59-generic build \
+        cd - \
+        git clone https://github.com/lewicki-pk/linux-headers-3.19.0-59.git /usr/src/linux-headers-3.19.0-59 \
+        git clone https://github.com/lewicki-pk/linux-headers-3.19.0-59-generic.git /usr/src/linux-headers-3.19.0-59-generic
 
 # libtool-bin was created/splitted in 16.04
 #        libtool-bin
