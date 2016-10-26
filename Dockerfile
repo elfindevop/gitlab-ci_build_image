@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
         tar \
         unzip \
         wget \
+        qt5-default \
         && apt-get clean \
         \
         && git clone https://github.com/google/googletest.git \
@@ -28,8 +29,5 @@ RUN apt-get update && apt-get install -y \
         \
         && mkdir -p /usr/lib/x86_64-linux-gnu \
         && ln -s libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_thread-mt.so
-
-# libtool-bin was created/splitted in 16.04
-#        libtool-bin
 
 # boost libraries with "-mt" suffix does not exist anymore. This should be fixed elsewhere but for convinience I'm adding this here.
