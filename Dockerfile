@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
         git \
         libboost-all-dev \
         libcgicc5-dev \
+        libcurl4-openssl-dev \
         libi2c-dev \
         libjsoncpp-dev \
         libpcre3-dev \
