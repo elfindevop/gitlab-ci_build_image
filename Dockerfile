@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
         cmake \
         g++ \
         git \
+        lcov \
         libblkid-dev \
         libboost-all-dev \
         libcgicc5-dev \
