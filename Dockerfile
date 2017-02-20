@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
         libjsoncpp-dev \
         libpcre3-dev \
         libssl-dev \
+        libsystemd-dev \
         libtar-dev \
         libtool \
         libtool-bin \
