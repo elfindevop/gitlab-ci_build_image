@@ -4,6 +4,7 @@ MAINTAINER lewicki.pk@gmail.com
 RUN apt-get update && apt-get install -y \
         automake \
         cmake \
+        curl \
         g++ \
         git \
         jq \
