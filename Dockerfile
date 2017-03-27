@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y \
         unzip \
         wget \
         qt5-default \
+        qtdeclarative5-dev \
         && apt-get clean \
         \
         && git clone https://github.com/google/googletest.git \
