@@ -3,6 +3,7 @@ MAINTAINER lewicki.pk@gmail.com
 
 RUN apt-get update && apt-get install -y \
         automake \
+        busybox \
         cmake \
         curl \
         g++ \
