@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
         libi2c-dev \
         libjsoncpp-dev \
         libpcre3-dev \
+        libqt5svg5-dev \
         libssl-dev \
         libsystemd-dev \
         libtar-dev \
