@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER lewicki.pk@gmail.com
 
 RUN apt-get update && apt-get install -y \
