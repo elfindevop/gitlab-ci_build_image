@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
         libboost-all-dev \
         libcgicc5-dev \
         libcurl4-openssl-dev \
+        libdbus-1-dev\
         libgpgme11-dev \
         libi2c-dev \
         libjsoncpp-dev \
