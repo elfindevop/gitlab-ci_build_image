@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-MAINTAINER lewicki.pk@gmail.com
+FROM ubuntu:18.04
+MAINTAINER sebastian.breuers@elfin.de
 
 RUN apt-get update && apt-get install -y \
         automake \
