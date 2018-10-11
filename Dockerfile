@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
         lcov \
         libblkid-dev \
         libboost-all-dev \
-        libcgicc5-dev \
+        libcgicc-dev \
         libcurl4-openssl-dev \
         libdbus-1-dev\
         libgpgme11-dev \
