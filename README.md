@@ -1,3 +1,3 @@
 # gitlab-ci_build_image
 
-significant change
+Used in the ELFIN build environment.
