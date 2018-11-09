@@ -35,9 +35,9 @@ RUN apt-get update && apt-get install -y \
         qtdeclarative5-dev \
         && apt-get clean \
         \
-        && git clone -b v1.8.x https://github.com/google/googletest.git googletest \
+        && git clone https://github.com/google/googletest.git googletest \
         && cd googletest \
-        && cmake -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install \
+        && cmake -DBUILD_GMOCK=ON -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install \
         \
         && mkdir -p /usr/lib/x86_64-linux-gnu \
         && ln -s libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_thread-mt.so
