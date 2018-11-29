@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y \
         tar \
         unzip \
         wget \
+        autorevision \
         qt5-default \
         qtdeclarative5-dev \
         && apt-get clean \
