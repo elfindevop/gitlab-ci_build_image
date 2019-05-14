@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
         libblkid-dev \
         libboost-all-dev \
         libcgicc-dev \
-        libcurl4-openssl-dev \
+        libcurl4-gnutls-dev \
         libdbus-1-dev\
         libgpgme11-dev \
         libi2c-dev \
@@ -34,6 +34,14 @@ RUN apt-get update && apt-get install -y \
         autorevision \
         qt5-default \
         qtdeclarative5-dev \
+        libmediainfo-dev \
+        qtbase5-private-dev \
+        libfontconfig1-dev \
+        libglib2.0-dev \
+        libfreetype6-dev \
+        libxrender-dev \
+        libudev-dev \
+        libmtdev-dev \
         && apt-get clean; \
         \
         git clone https://github.com/google/googletest.git googletest \
