@@ -42,17 +42,17 @@ RUN apt-get update && apt-get install -y \
         libxrender-dev \
         libudev-dev \
         libmtdev-dev \
-        && apt-get clean; \
-        \
-        git clone https://github.com/google/googletest.git googletest \
+        && apt-get clean;
+
+RUN git clone https://github.com/google/googletest.git googletest \
         && cd googletest \
         && cmake -DBUILD_GMOCK=ON -DCMAKE_INSTALL_PREFIX=/usr/ ./CMakeLists.txt && make && make install \
-        && cd -; \
-        \
-        mkdir -p /usr/lib/x86_64-linux-gnu \
-        && ln -s libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_thread-mt.so; \
-        \
-        git clone https://github.com/redboltz/mqtt_cpp.git \
+        && cd -;
+
+RUN mkdir -p /usr/lib/x86_64-linux-gnu \
+        && ln -s libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_thread-mt.so;
+
+RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
         && mkdir mqtt_cpp/build \
         && cd mqtt_cpp/build \
         && cmake -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF .. \
