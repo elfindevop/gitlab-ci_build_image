@@ -55,7 +55,7 @@ RUN mkdir -p /usr/lib/x86_64-linux-gnu \
 RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
         && mkdir mqtt_cpp/build \
         && cd mqtt_cpp/build \
-        && cmake -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF .. \
+        && cmake -DMQTT_NO_TLS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF .. \
         && make install
 
 # boost libraries with "-mt" suffix does not exist anymore. This should be fixed elsewhere but for convinience I'm adding this here.
