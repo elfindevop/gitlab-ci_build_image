@@ -61,4 +61,5 @@ RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
 COPY files/bump_patch_version /usr/local/bin/bump_patch_version
 
 RUN mkdir /workspace
+RUN chmod 777 /workspace
 WORKDIR /workspace
