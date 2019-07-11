@@ -59,4 +59,6 @@ RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
         && make install
 
 COPY files/bump_patch_version /usr/local/bin/bump_patch_version
-# boost libraries with "-mt" suffix does not exist anymore. This should be fixed elsewhere but for convinience I'm adding this here.
+
+RUN mkdir /workspace
+WORKDIR /workspace
