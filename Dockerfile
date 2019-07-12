@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y \
         libxrender-dev \
         libudev-dev \
         libmtdev-dev \
+        libboost-coroutine-dev \
         && apt-get clean;
 
 RUN git clone https://github.com/google/googletest.git googletest \
