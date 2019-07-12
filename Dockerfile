@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
         qtdeclarative5-dev \
         libmediainfo-dev \
         qtbase5-private-dev \
+        libarchive-dev \
         libfontconfig1-dev \
         libglib2.0-dev \
         libfreetype6-dev \
