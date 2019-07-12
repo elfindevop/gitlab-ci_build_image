@@ -57,6 +57,14 @@ RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
         && cd mqtt_cpp/build \
         && cmake -DMQTT_NO_TLS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF .. \
         && make install
+RUN wget https://github.com/kergoth/tslib/releases/download/1.1/tslib-1.1.tar.xz \
+    && tar xf tslib-1.1.tar.xz \
+    && cd tslib-1.1 \
+    && ./autogen.sh \
+    && ./configure --enable-shared --disable-h3600 --enable-input --disable-corgi --disable-collie --disable-mk712 --disable-arctic2 --disable-ucb1x00 \
+    && make \
+    && make install \
+    && cd -
 
 COPY files/bump_patch_version /usr/local/bin/bump_patch_version
 
