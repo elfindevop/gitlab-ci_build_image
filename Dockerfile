@@ -69,6 +69,13 @@ RUN wget https://github.com/kergoth/tslib/releases/download/1.1/tslib-1.1.tar.xz
 
 COPY files/bump_patch_version /usr/local/bin/bump_patch_version
 
-RUN mkdir /workspace
-RUN chmod 777 /workspace
-WORKDIR /workspace
+RUN wget https://github.com/ChaiScript/ChaiScript/archive/v6.1.0.tar.gz -O chaiscript.tar.gz \
+        && tar xzvf chaiscript.tar.gz \
+        && cd ChaiScript-6.1.0/ \
+        && mkdir build \
+        && cd build/ \
+        && cmake -DBUILD_TESTING=OFF .. \
+        && make -j3 \
+        && make install \
+        && cd ../.. \
+        && rm -r ChaiScript-6.1.0/
