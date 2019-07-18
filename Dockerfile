@@ -43,7 +43,6 @@ RUN apt-get update && apt-get install -y \
         libxrender-dev \
         libudev-dev \
         libmtdev-dev \
-        libprotobuf-dev \
         && apt-get clean;
 
 RUN git clone https://github.com/google/googletest.git googletest \
@@ -80,3 +79,16 @@ RUN wget https://github.com/ChaiScript/ChaiScript/archive/v6.1.0.tar.gz -O chais
         && make install \
         && cd ../.. \
         && rm -r ChaiScript-6.1.0/
+
+RUN export version=3.9.0; export archive=protobuf-cpp-${version}.tar.gz; \
+        curl -L https://github.com/protocolbuffers/protobuf/releases/download/v${version}/${archive} -o ${archive} \
+        && tar -xf ${archive} \
+        && cd protobuf-${version} \
+        && mkdir build \
+        && cd build \
+        && ../configure \
+        && make \
+        && make install \
+        && ldconfig \
+        && cd ../.. \
+        && rm -r protobuf-${version}
