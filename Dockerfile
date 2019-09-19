@@ -56,7 +56,7 @@ RUN mkdir -p /usr/lib/x86_64-linux-gnu \
 RUN git clone https://github.com/elfin-sbreuers/mqtt_cpp.git \
         && mkdir mqtt_cpp/build \
         && cd mqtt_cpp/build \
-        && cmake -DMQTT_NO_TLS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF .. \
+        && cmake -DMQTT_NO_TLS=OFF -DMQTT_BUILD_EXAMPLES=OFF -DMQTT_BUILD_TESTS=OFF .. \
         && make install
 RUN wget https://github.com/kergoth/tslib/releases/download/1.1/tslib-1.1.tar.xz \
     && tar xf tslib-1.1.tar.xz \
